@@ -1,0 +1,455 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.5s ease;
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: #198754;
+    /* Choose your desired highlight color */
+    color: #ffffff;
+    /* Choose the text color for the highlighted text */
+}
+
+::-moz-selection {
+    background-color: #198754;
+    /* For Firefox */
+    color: #ffffff;
+}
+
+body {
+    background-color: #212529;
+    color: white;
+}
+
+.shadow-sm-custom {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.bg-light-custom {
+    background-color: #131316;
+
+}
+
+.card-custom {
+    background-color: #1c2127;
+    border-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.nav-bg-custom {
+
+
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.img img {
+    height: 100px;
+    width: 100%;
+
+}
+
+
+.loginform,
+.loginform:-webkit-autofill,
+.loginform:focus {
+    background-color: #1e1e1e8b;
+    color: white;
+    outline: none;
+    border-radius: 0;
+
+}
+
+
+
+
+
+.hover_cst {
+    color: rgb(185, 185, 185);
+}
+
+.hover_cst:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+.yellow {
+    color: #e3dd71;
+}
+
+.orange {
+    color: #e3ae71;
+}
+
+.orange-flow {
+    color: #ed3427;
+}
+
+.green {
+    color: #5bd2aa;
+}
+
+.purple {
+    color: #5e60d6;
+
+}
+
+.disabled-text {
+    color: rgba(255, 255, 255, 0.185);
+}
+
+.hero-new__background-image {
+
+
+    height: 100vh;
+    width: 100%;
+
+
+    /* Background image properties */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('assets/son-riot-website_short.png');
+
+}
+
+.hero-new__background-image-user {
+
+
+    height: 50vh;
+    width: 100%;
+
+
+    /* Background image properties */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('assets/usersettings.webp.png');
+
+}
+
+
+@media (min-width: 760px) {
+    .hero-new__background-image {
+        background-image: url('assets/son-riot-website.png');
+    }
+}
+
+.modal {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('assets/modal_bg.png');
+}
+
+
+
+.modal-content {
+    background-color: #212529;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('assets/bg_2.png');
+    border-radius: 0;
+}
+
+.toast-custom {
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: white;
+    background-color: #131316f0;
+    border-radius: 0;
+
+}
+
+::-webkit-scrollbar {
+    background-color: rgb(255, 255, 255)888;
+    width: 12px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255)888;
+    border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(255, 255, 255)555;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #2c2c2c;
+}
+
+/* Handle when scrolling */
+::-webkit-scrollbar-thumb:active {
+    background-color: #ffffff;
+}
+
+.sidebar {
+    display: none;
+    width: 400px;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    color: white;
+    background-color: #202020;
+
+}
+
+.sidebar.active {
+    display: block;
+}
+
+.sidebar-header {
+    padding: 10px;
+
+    color: #fff;
+    text-align: center;
+}
+
+.sidebar-list {
+    padding: 0px;
+    list-style: none;
+}
+
+.sidebar-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.sidebar-list li:hover {
+    background-color: #198754;
+}
+
+.profile-picture {
+
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+
+}
+
+.profile-picture-display {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+
+
+}
+
+
+.hover-container {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.hover-container img {
+
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.hover-container .hover-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+/* Add hover effect */
+.hover-container:hover img {
+    filter: grayscale(100%);
+
+
+}
+
+/* Display icon on hover */
+.hover-container:hover .hover-icon {
+    opacity: 1;
+}
+
+.highlight-red {
+    padding: 6px;
+
+    background-color: #ed3427;
+}
+
+.text-shadow-custom {
+    text-shadow: 2px 7px 12px rgba(0, 0, 0, 0.64);
+}
+
+
+
+
+
+
+.custom-margin-10 {
+    margin: 100px;
+}
+
+@media (min-width: 256px) {
+    .custom-margin-10 {
+        margin: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .custom-margin-10 {
+        margin: 20px;
+
+    }
+}
+
+
+.section-parallax {
+    background-image: url('assets/bg_1.png');
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: static;
+}
+
+
+
+.file-upload {
+
+
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.btn {
+    border-radius: 0;
+    padding: 10px;
+
+
+}
+
+.file-upload-btn:active {
+    border: 0;
+    transition: all .2s ease;
+}
+
+/* PLACEHOLDER */
+.file-upload-preview {
+    display: none;
+    text-align: center;
+}
+
+.file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-upload-placeholder {
+    margin-top: 20px;
+    border: #fff;
+    position: relative;
+    color: #fff;
+}
+
+.image-dropping,
+.file-upload-placeholder:hover {
+
+    border: #fff;
+}
+
+.drag-text {
+    text-align: center;
+}
+
+.drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 60px 0;
+}
+
+/* PREVIEW */
+.file-upload-image {
+    max-height: 500px;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* REMOVE */
+.file-upload-remove {
+    color: #ffffff;
+}
+
+.remove-image {
+    width: 500px;
+    margin: 0;
+    color: #ffffff;
+
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.remove-image:hover {
+
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.remove-image:active {
+    border: 0;
+    transition: all .2s ease;
+}
+
+
+.circular-button {
+    width: 70px;
+    height: 70px;
+    background-color: #13131600;
+    border-radius: 50%;
+    /* Set your desired background color */
+    border: none;
+    cursor: pointer;
+}
+
+.circular-button img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+}
