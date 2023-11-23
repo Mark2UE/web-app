@@ -32,6 +32,7 @@ Route::controller(UserController::class)->group(function(){
     Route::post('/login', 'login')->middleware('guest');
     Route::get('/user', 'show')->middleware('auth');
     Route::post('/upload', 'store')->middleware('auth');
+    Route::get('/community', 'show_community')->middleware('auth');
  
 });
 
