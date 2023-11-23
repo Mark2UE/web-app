@@ -87,9 +87,9 @@
             </div>
         </div>
         <ul class="sidebar-list">
-            <a href="">
+            <a href="/community">
                 <li>
-                    <div class="btn hover_cst"><b><i class="bi bi-box-arrow-in-down"></i>&nbsp;&nbsp;Post</b></div>
+                    <div class="btn hover_cst"><b><i class="bi bi-people"></i>&nbsp;&nbsp;Community</b></div>
                 </li>
             </a>
             <a href="/user">
