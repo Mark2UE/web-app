@@ -22,6 +22,20 @@ body {
     color: white;
 }
 
+.zenBody {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('assets/background.png');
+}
+
+
+
+.container-bg-custom {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 .shadow-sm-custom {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -297,14 +311,29 @@ body {
     background-color: #ed3427;
 }
 
+
+.highlight-green {
+
+
+    color: #161a1f;
+    background-color: #5bd2aa;
+}
+
 .text-shadow-custom {
     text-shadow: 2px 7px 12px rgba(0, 0, 0, 0.64);
 }
 
+.bg-header {
+    background-color: #2b3136;
+}
 
+.bg-header-nav {
+    background-color: #212529f4;
+}
 
-
-
+.custom-margin-x-10 {
+    margin-top: 200px;
+}
 
 .custom-margin-10 {
     margin: 100px;
@@ -452,4 +481,33 @@ body {
     height: 100%;
     border-radius: 50%;
 
+}
+
+.gedf-wrapper {
+    margin-top: 0.97rem;
+}
+
+@media (min-width: 992px) {
+    .gedf-main {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .gedf-card {
+        margin-bottom: 2.77rem;
+    }
+}
+
+
+.custom-card-dark {
+    background-color: #161a1f;
+    border-radius: 0;
+    color: white;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.image-holder img {
+    max-width: 100px;
+    max-height: 100px;
 }
