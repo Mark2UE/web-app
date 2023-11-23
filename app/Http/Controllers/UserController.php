@@ -1,10 +1,6 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
-
 use Illuminate\Validation\Rule;
 use Illuminate\Hashing;
 use Illuminate\Support\Facades\Hash;
@@ -12,6 +8,8 @@ use Illuminate\Support\View;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+
+
 class UserController extends Controller
 {
     public function register(Request $request){
@@ -92,7 +90,12 @@ class UserController extends Controller
     ]);
     return back()->with('messagegreen', 'User picture updated successfully.');
    
-}
+    }
+
+
+    public function show_community(){
+    return view('zencom.community');
+    }
 
 
 
