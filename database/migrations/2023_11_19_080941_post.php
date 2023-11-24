@@ -13,12 +13,12 @@ class Post extends Migration
      */
     public function up()
     {
-        Schema::create('post', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('body');
-            $table->string('author');   
-            $table->string('status');  
+            $table->text('body');
+            $table->string('author');
+            $table->string('status');
             $table->timestamps();
         });
     }
