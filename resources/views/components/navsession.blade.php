@@ -48,41 +48,39 @@
                 <center>
                     <div class="row">
 
-                        <div class="col-* m-1 p-1 hover-container">
+                        <div class="col-* hover-container">
+                            <div class="d-flex justify-content-center mx-auto">
+                                @if (auth()->user()->picture)
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#insertavatar">
+                                        <img class="file-upload-image profile-picture-display"
+                                            src="data:image/jpeg;base64,{{ base64_encode(auth()->user()->picture) }}"
+                                            alt="User Picture">
+                                    </a>
+                                @else
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#insertavatar">
+                                        <img src="{{ asset('css/assets/defaultpic.JPG') }}" alt="User Picture"
+                                            class="profile-picture">
+                                    </a>
+                                @endif
+                            </div>
 
-                            @if (auth()->user()->picture)
-                                <a href="" data-bs-toggle="modal" data-bs-target="#insertavatar">
-                                    <img class="file-upload-image profile-picture-display"
-                                        src="data:image/jpeg;base64,{{ base64_encode(auth()->user()->picture) }}"
-                                        alt="User Picture">
-                                </a>
-                            @else
-                                <a href="" data-bs-toggle="modal" data-bs-target="#insertavatar">
-                                    <img src="{{ asset('css/assets/defaultpic.JPG') }}" alt="User Picture"
-                                        class="profile-picture">
-                                </a>
-                            @endif
                             <span class="hover-icon">
                                 <h1 class="bi bi-upload fa-3x text-white"></h1>
                                 <b>Upload Image</b>
                             </span>
-
-
-
                         </div>
-                        <br> <br>
+
                         <div class="col-* m-1 p-1">
                             <label class="">
                                 {{ auth()->user()->name }}
                             </label>
-
                             <br>
                             <label class="text-wrap">
                                 {{ auth()->user()->email }}
                             </label>
                         </div>
                     </div>
-                    <br><br>
+                 
                 </center>
             </div>
         </div>

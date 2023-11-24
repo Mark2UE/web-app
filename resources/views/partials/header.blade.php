@@ -20,8 +20,7 @@
      
     @if (Auth::check())
     @include('components.navsession')
-   
-   
     @else
     @include('components.nav')
     @endif
+
