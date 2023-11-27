@@ -36,14 +36,20 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/welcome', 'index');
     Route::get('/home', 'index');
     Route::get('/', 'index')->name('home');
-    Route::get('/forgot-password', 'show_form')->name('show.forgot');
-    Route::post('/forgot-password', 'forgot_password')->name('forgot.password')->middleware('guest');
-    Route::get('/reset/{resettoken}', 'password_reset')->name('validation');
+    // Route::get('/forgot-password', 'show_form')->name('show.forgot');
+    // Route::post('/forgot-password', 'forgot_password')->name('forgot.password')->middleware('guest');
+    // Route::get('/reset/{resettoken}', 'password_reset')->name('validation');
 });
 
 Route::controller(LoginController::class)->group(function () {
     Route::get('/login/google', 'redirectToGoogle');
     Route::get('/login/google/callback', 'handleGoogleCallback');
+
+
+    // routes/web.php
+
+    Route::get('/login/github', 'redirectToGitHub');
+    Route::get('/login/github/callback', 'handleGitHubCallback');
 });
 
 

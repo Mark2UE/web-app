@@ -58,12 +58,10 @@ class UserController extends Controller
         $user_lower = strtolower($validatedData['name']);
         $email_lower = strtolower($validatedData['email']);
 
-        // Concatenate '@' with lowercase 'name'
-
-
+        $noSpacesString = preg_replace('/\s+/', '', $user_lower);
         // Process and store the data
         $user = User::create([
-            'name' => $user_lower,
+            'name' => $noSpacesString,
             'email' => $email_lower,
             'password' => Hash::make($validatedData['password']),
         ]);
@@ -151,59 +149,59 @@ class UserController extends Controller
             'posts' => $posts
         ])->with('messagreen', 'Welcome to /Communnity');
     }
-    public function show_form()
-    {
-        return view('forgot_password');
-    }
+    // public function show_form()
+    // {
+    //     return view('forgot_password');
+    // }
 
 
-    public function forgot_password(Request $request)
-    {
+    // public function forgot_password(Request $request)
+    // {
 
-        $request->validate([
-            'email' => 'required|email|exists:users',
-        ]);
-        $users = DB::table('users')
-            ->select('*')
-            ->where('email', '=', $request['email'])
-            ->first();
-        if (!$users) {
-            return back()->with('message', 'no email found.');
-        }
+    //     $request->validate([
+    //         'email' => 'required|email|exists:users',
+    //     ]);
+    //     $users = DB::table('users')
+    //         ->select('*')
+    //         ->where('email', '=', $request['email'])
+    //         ->first();
+    //     if (!$users) {
+    //         return back()->with('message', 'no email found.');
+    //     }
 
-        $token = Str::random(64);
-        DB::table('password_resets')->insert([
-            'email' => $request['email'],
-            'token' => $token,
-            'created_at' => Carbon::now()
-        ]);
+    //     $token = Str::random(64);
+    //     DB::table('password_resets')->insert([
+    //         'email' => $request['email'],
+    //         'token' => $token,
+    //         'created_at' => Carbon::now()
+    //     ]);
 
-        mail::send(
-            'mails.mailer-forgot',
-            [
-                'users' => $users,
-                'token' => $token
-            ],
-            function ($message) use ($request) {
-                $message->to($request['email']);
-                $message->subject('Forgot Password');
-            }
+    //     mail::send(
+    //         'mails.mailer-forgot',
+    //         [
+    //             'users' => $users,
+    //             'token' => $token
+    //         ],
+    //         function ($message) use ($request) {
+    //             $message->to($request['email']);
+    //             $message->subject('Forgot Password');
+    //         }
 
-        );
+    //     );
 
-        return redirect()->to(route("show.forgot"))->with("message", "Check your email for Password reset link");
-    }
+    //     return redirect()->to(route("show.forgot"))->with("message", "Check your email for Password reset link");
+    // }
 
-    public function password_reset($token)
-    {
-        $users = DB::table('password_resets')
-            ->select('*')
-            ->where('token', '=', $token)
-            ->first();
-        if (!$users) {
-            return back()->with('message', 'Token not found.');
-        } else {
-            return back()->with('message', 'Token found can change pass.');
-        }
-    }
+    // public function password_reset($token)
+    // {
+    //     $users = DB::table('password_resets')
+    //         ->select('*')
+    //         ->where('token', '=', $token)
+    //         ->first();
+    //     if (!$users) {
+    //         return back()->with('message', 'Token not found.');
+    //     } else {
+    //         return back()->with('message', 'Token found can change pass.');
+    //     }
+    // }
 }
