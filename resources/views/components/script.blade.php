@@ -25,16 +25,7 @@
             submitButton.disabled = false;
         }
 
-
-        var nameInput = $('#name_type').val();
-
-        // Check if "@" is already at the beginning
-        if (!nameInput.toLowerCase().startsWith('@')) {
-            var processedName = '@' + nameInput.toLowerCase();
-            $('#name_type').val(processedName);
-        }
     }
-
 
 
     const takenEmails = JSON.parse(@json($takenEmails));

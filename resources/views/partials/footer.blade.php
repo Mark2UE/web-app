@@ -201,8 +201,8 @@
         });
     </script>
 @elseif (!Auth::check())
-@else
     @include('components.script')
+@else
 @endif
 
 

@@ -70,18 +70,25 @@
                                             id="password" name="password">
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-center mt-5">
-                                    <a href="{{ route('show.forgot') }}" style="text-decoration: none;color:#198754;">
-                                        Forgot
-                                        Password
-                                    </a>
-                                </div>
+
                                 <div class="mt-5">
                                     <button type="submit" class="btn btn-success form-control" id="loading-btn"
                                         onclick="submitForm()">
                                         <span class="spinner-border spinner-border-sm d-none" role="status"
                                             aria-hidden="true"></span>
                                         Login</button>
+                                    <hr>
+                                    <a href="{{ url('login/google') }}"
+                                        class="btn btn-outline-success form-control mb-2">
+                                        <span class="spinner-border spinner-border-sm d-none" role="status"
+                                            aria-hidden="true"></span>
+                                        <i class="bi bi-google"></i>&nbsp;Sign-in using Google</a>
+
+                                    <a href="{{ url('login/github') }}"
+                                        class="btn btn-outline-success form-control mb-2">
+                                        <span class="spinner-border spinner-border-sm d-none" role="status"
+                                            aria-hidden="true"></span>
+                                        <i class="bi bi-github"></i>&nbsp;Sign-in using github</a>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +133,7 @@
                                         <span class="input-group-text loginform "><i
                                                 class="bi bi-person-circle"></i></span>
                                         <input type="text" class="form-control loginform" id="name_type"
-                                            name="name" maxlength="10" onkeyup="validateUser();">
+                                            name="name" maxlength="10">
                                     </div>
                                 </div>
                             </div>
@@ -152,7 +159,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="{{ url('login/google') }}">Login with Google</a>
+
 
                         <div class="d-flex justify-content-center p-3">
                             <i class="red" id="message"></i>
@@ -161,6 +168,16 @@
                             <span class="spinner-border spinner-border-sm d-none" role="status"
                                 aria-hidden="true"></span>
                             Register</button>
+                        <hr>
+                        <a href="{{ url('login/google') }}" class="btn btn-outline-success form-control mb-2">
+                            <span class="spinner-border spinner-border-sm d-none" role="status"
+                                aria-hidden="true"></span>
+                            <i class="bi bi-google"></i>&nbsp;Sign-in using Google</a>
+
+                        <a href="{{ url('login/github') }}" class="btn btn-outline-success form-control mb-2">
+                            <span class="spinner-border spinner-border-sm d-none" role="status"
+                                aria-hidden="true"></span>
+                            <i class="bi bi-github"></i>&nbsp;Sign-in using github</a>
                 </div>
             </div>
         </div>
