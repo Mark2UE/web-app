@@ -170,34 +170,59 @@
 
 </html>
 
-<script>
-    const sidebar1 = document.querySelector('.sidebar-inside');
-    const toggleSidebar1 = document.querySelector('#toggle-sidebar-inside');
 
-    toggleSidebar1.addEventListener('click', () => {
-        sidebar1.classList.toggle('active');
-    });
-
-
-    document.getElementById('toggle-sidebar-inside').addEventListener('click', () => {
+@if (Auth::check())
+    <script>
         const sidebar1 = document.querySelector('.sidebar-inside');
-        sidebar1.classList.toggle('hidden');
-    });
-</script>
-<script>
-    const sidebar = document.querySelector('.sidebar');
-    const toggleSidebar = document.querySelector('#toggle-sidebar');
+        const toggleSidebar1 = document.querySelector('#toggle-sidebar-inside');
 
-    toggleSidebar.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
-    });
+        toggleSidebar1.addEventListener('click', () => {
+            sidebar1.classList.toggle('active');
+        });
 
 
-    document.getElementById('toggle-sidebar').addEventListener('click', () => {
+        document.getElementById('toggle-sidebar-inside').addEventListener('click', () => {
+            const sidebar1 = document.querySelector('.sidebar-inside');
+            sidebar1.classList.toggle('hidden');
+        });
+    </script>
+    <script>
         const sidebar = document.querySelector('.sidebar');
-        sidebar.classList.toggle('hidden');
-    });
+        const toggleSidebar = document.querySelector('#toggle-sidebar');
+
+        toggleSidebar.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+
+        document.getElementById('toggle-sidebar').addEventListener('click', () => {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('hidden');
+        });
+    </script>
+@elseif (!Auth::check())
+@else
+    @include('components.script')
+@endif
+
+
+
+
+<script>
+    var check = function() {
+        if (document.getElementById('password_type').value === document.getElementById('password_confirmation')
+            .value) {
+            document.getElementById('message').style.color = 'green';
+            document.getElementById('message').innerHTML = 'Password Matched';
+            document.getElementById('loading-btn1').disabled = false;
+        } else {
+            document.getElementById('loading-btn1').disabled = true;
+            document.getElementById('message').style.color = 'red';
+            document.getElementById('message').innerHTML = 'not matched';
+        }
+    }
 </script>
+
 
 <script>
     function submitForm() {
