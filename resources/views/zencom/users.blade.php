@@ -1,5 +1,5 @@
 @include('zencom.partials.header')
-<title>Zen | Community</title>
+<title>Community</title>
 <x-message />
 <div class="row" style="height: 100vh">
     <div class="col-lg-12 d-flex justify-content-center">

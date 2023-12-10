@@ -1,15 +1,10 @@
 <div class="modal fade" tabindex="-1" id="postform" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-
     <div class="modal-dialog modal-dialog-centered">
         <div class="d-flex flex-column w-100">
             <div class="p-2">
                 <h5 class="text-center">Post</h5>
             </div>
-
-
-
-            <div class="modal-content">
+         <div class="modal-content">
                 <div class="modal-body">
                     <div class="d-flex flex-row justify-content-between">
                         <div class="p-2 d-flex flex-row align-items-center">
@@ -48,7 +43,7 @@
                                         onclick="submitForm()">
                                         <span class="spinner-border spinner-border-sm d-none" role="status"
                                             aria-hidden="true"></span>
-                                        POST</button>
+                                        Post</button>
                                 </div>
                     </form>
                 </div>

@@ -14,15 +14,33 @@
 
         <div class="collapse navbar-collapse fs-5  justify-content-between" id="navbarTogglerDemo01">
             <a class="navbar-brand text-white" href="/community">
-                <div class="fs-4"><span class="highlight-green">
-                        Zen</span><b>/Community</b></div>
+                <div class="fs-4"><b>/Community</b>
+                </div>
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item px-3">
-                    <a class="nav-link text-white" aria-current="page" href="/community/profile">Profile</a>
+                    <a class="nav-link text-white" aria-current="page" href="/community/profile">
+
+
+                        @if ($nav_bar == 'profile')
+                            <p class="green"> Profile</p>
+                        @else
+                            <p> Profile</p>
+                        @endif
+
+                    </a>
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link text-white" href="/community">Feeds</a>
+                    <a class="nav-link text-white" href="/community">
+
+                        @if ($nav_bar == 'community')
+                            <p class="green"> Feeds</p>
+                        @else
+                            <p> Feeds</p>
+                        @endif
+
+
+                    </a>
                 </li>
                 <li class="nav-item px-3">
                     <a class="nav-link text-white" href="/">Main</a>

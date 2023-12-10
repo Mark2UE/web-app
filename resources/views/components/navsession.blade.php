@@ -13,19 +13,16 @@
             <ul class="navbar-nav me-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
                 <li class="nav-item">
                     <a class="nav-link hover_cst" aria-current="page" href="/"><b
-                            class="bi bi-house purple">&nbsp;&nbsp;</b>Home&nbsp;&nbsp;</a>
+                            class="bi bi-house purple">&nbsp;</b>Home&nbsp;&nbsp;</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link hover_cst" href="#"><b
-                            class="bi bi-people orange">&nbsp;&nbsp;</b>Teams&nbsp;&nbsp;</a>
+                            class="bi bi-people orange">&nbsp;</b>Teams&nbsp;&nbsp;</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link hover_cst" href="#"><b
-                            class="bi bi-calendar green">&nbsp;&nbsp;</b>Events&nbsp;&nbsp;</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link hover_cst" href="#"><b
-                            class="bi bi-lightning-charge yellow">&nbsp;&nbsp;</b>About Zen&nbsp;&nbsp;</a>
+                            class="bi bi-lightning-charge yellow">&nbsp;</b>About Community&nbsp;&nbsp;</a>
                 </li>
 
             </ul>
@@ -80,7 +77,7 @@
                             </label>
                         </div>
                     </div>
-                 
+
                 </center>
             </div>
         </div>
@@ -131,11 +128,11 @@
                             <div class="form-outline">
                                 <div class="file-upload">
                                     <div class="file-upload-placeholder">
-                                        <input class="file-upload-input" type='file' name="picture"
-                                            id="image1" onchange="readURL(this);" accept="image/*" required />
+                                        <input class="file-upload-input" type='file' name="picture" id="image1"
+                                            onchange="readURL(this);" accept="image/*" required />
                                         <button class="drag-text btn btn-success form-control">
                                             <i class="bi bi-upload"></i>
-                                            UPLOAD IMAGE HERE
+                                            Upload
                                         </button>
                                     </div>
                                     <div class="file-upload-preview">

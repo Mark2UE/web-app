@@ -1,23 +1,52 @@
 @include('partials.header')
-<title>Home</title>
+<title>/C | Welcome</title>
 
 <div class="hero-new__background-image d-flex align-items-center">
 
     <div class="container-xxl">
         <div class="row m-5">
-            <div class="col-lg-12 text-center p-5">
-                <b class="highlight-red">UE ZENITH ESPORTS</b>
-                <h1 class="fs-1">
-                    <br>
-                    We Are <b id="delivery" class="text-shadow-custom"></b>.
-                </h1>
+            <div class="col-lg-6 text-start p-5">
+                <b>Welcome to Community</b>
+                <div class="fs-1">
+                    Create <span id="delivery"></span>
+                </div>
+                <br>
+                <p>Empower Your World: Contribute, Interact, Connect with Community. 🌐✨</p>
+            </div>
+            <div class="col-lg-6 p-5">
+                @if (Auth::check())
+                    <div class="text-end">
+                        <br>
+                        <div class="fs-1">Hello, {{ auth()->user()->name }} 👋<br>
+                        </div>
+                        <p>What's on your mind?</p>
+
+                    </div>
+                @else
+                    <div class="text-center">                                   c1
+                        <p>Sign-in using </p>
+                        <a href="{{ url('login/google') }}" class="btn btn-outline-light form-control mb-2">
+                            <span class="spinner-border spinner-border-sm d-none" role="status"
+                                aria-hidden="true"></span>
+                            <i class="bi bi-google"></i>&nbsp;Google</a>
+
+                        <a href="{{ url('login/github') }}" class="btn btn-outline-light form-control mb-2">
+                            <span class="spinner-border spinner-border-sm d-none" role="status"
+                                aria-hidden="true"></span>
+                            <i class="bi bi-github"></i>&nbsp;Github</a>
+
+                    </div>
+
+                    Create a Page for a celebrity, brand or business.
+                @endif
+
             </div>
 
         </div>
     </div>
 
 </div>
-<section class="section-parallax">
+{{-- <section class="section-parallax">
     <div class="text-white">
         <div class="custom-margin-10">
 
@@ -139,15 +168,15 @@
 
     </div>
 
-</section>
+</section> --}}
 
-
+{{-- 
 <section>
     <div class="custom-margin-10">
 
     </div>
 
 </section>
-
+ --}}
 
 @include('partials.footer')

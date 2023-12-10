@@ -105,6 +105,7 @@ body {
 
 .green {
     color: #5bd2aa;
+
 }
 
 .purple {
@@ -121,7 +122,6 @@ body {
 
     height: 100vh;
     width: 100%;
-
 
     /* Background image properties */
     background-attachment: fixed;
@@ -144,7 +144,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('assets/usersettings.webp.png');
+    background-image: url('assets/gif.gif');
 
 }
 
@@ -559,4 +559,8 @@ body {
 
 
 
+}
+
+.img-coffee img {
+    height: 50px;
 }

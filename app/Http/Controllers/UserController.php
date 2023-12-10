@@ -146,9 +146,30 @@ class UserController extends Controller
             ->get();
         $info = ['message' => "Welcome to /Communnity"];
         return view('zencom.community', [
-            'posts' => $posts
+            'posts' => $posts,
+            'nav_bar' => 'community'
         ])->with('messagreen', 'Welcome to /Communnity');
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // public function show_form()
     // {
     //     return view('forgot_password');

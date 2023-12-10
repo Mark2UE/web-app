@@ -25,11 +25,11 @@ class LoginController extends Controller
         }
 
 
-        // Check if the user with this email already exists in your database
+     
         $existingUser = User::where('email', $user->email)->first();
 
         if ($existingUser) {
-            // Log in the existing user
+          
             Auth::login($existingUser, true);
 
             return redirect('/')->with('message', 'You have already an account');
@@ -48,13 +48,11 @@ class LoginController extends Controller
                 // Add any other fields you need for your User model
             ]);
 
-            // Log in the newly created user
+            
             Auth::login($newUser, true);
         }
 
-        // At this point, the user is authenticated in your application
-
-        // Redirect to the home page or wherever you want
+     
         return redirect('/home')->with('messagegreen', 'Registration successful using Google');
     }
 
@@ -74,11 +72,11 @@ class LoginController extends Controller
             dd($e->getMessage());
         }
 
-        // Check if the user with this email already exists in your database
+     
         $existingUser = User::where('email', $user->email)->first();
 
         if ($existingUser) {
-            // Log in the existing user
+          
             Auth::login($existingUser, true);
 
             return redirect('/')->with('message', 'You have already an account');
@@ -92,11 +90,11 @@ class LoginController extends Controller
                 'name' => $noSpacesString,
                 'email' => $user->email,
                 'picture' => $imageContent,
-                'password' => bcrypt(Str::random(16)), // You might want to generate a random password for external logins
-                // Add any other fields you need for your User model
+                'password' => bcrypt(Str::random(16)), 
+              
             ]);
 
-            // Log in the newly created user
+         
             Auth::login($newUser, true);
         }
 
@@ -105,4 +103,52 @@ class LoginController extends Controller
         // Redirect to the home page or wherever you want
         return redirect('/home')->with('messagegreen', 'Registration successful using Github');
     }
+
+
+
+    // public function redirectToFacebook()
+    // {
+    //     return Socialite::driver('facebook')->redirect();
+    // }
+
+    // public function handleFacebookCallback()
+    // {
+    //     try {
+    //         $user = Socialite::driver('facebook')->user();
+    //         dd($user);
+    //     } catch (\Exception $e) {
+    //         dd($e->getMessage());
+    //     }
+
+    //     // Check if the user with this email already exists in your database
+    //     $existingUser = User::where('email', $user->email)->first();
+
+    //     if ($existingUser) {
+    //         // Log in the existing user
+    //         Auth::login($existingUser, true);
+
+    //         return redirect('/')->with('message', 'You have already an account');
+    //     } else {
+
+
+    //         $imageContent = file_get_contents($user->avatar);
+    //         $noSpacesString = preg_replace('/\s+/', '',  $user->nickname);
+
+    //         $newUser = User::create([
+    //             'name' => $noSpacesString,
+    //             'email' => $user->email,
+    //             'picture' => $imageContent,
+    //             'password' => bcrypt(Str::random(16)), // You might want to generate a random password for external logins
+    //             // Add any other fields you need for your User model
+    //         ]);
+
+    //         // Log in the newly created user
+    //         Auth::login($newUser, true);
+    //     }
+
+    //     // At this point, the user is authenticated in your application
+
+    //     // Redirect to the home page or wherever you want
+    //     return redirect('/home')->with('messagegreen', 'Registration successful using Facebook');
+    // }
 }

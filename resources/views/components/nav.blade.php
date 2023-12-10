@@ -12,19 +12,16 @@
             <ul class="navbar-nav me-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
                 <li class="nav-item">
                     <a class="nav-link hover_cst" aria-current="page" href="/"><b
-                            class="bi bi-house purple">&nbsp;&nbsp;</b>Home&nbsp;&nbsp;</a>
+                            class="bi bi-house purple">&nbsp;</b>Home&nbsp;&nbsp;</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link hover_cst" href="/teams"><b
-                            class="bi bi-people orange">&nbsp;&nbsp;</b>Teams&nbsp;&nbsp;</a>
+                            class="bi bi-people orange">&nbsp;</b>Teams&nbsp;&nbsp;</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link hover_cst" href="/events"><b
-                            class="bi bi-calendar green">&nbsp;&nbsp;</b>Events&nbsp;&nbsp;</a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link hover_cst" href="/about"><b
-                            class="bi bi-lightning-charge yellow">&nbsp;&nbsp;</b>About Zen&nbsp;&nbsp;</a>
+                            class="bi bi-lightning-charge yellow">&nbsp;</b>About Zen&nbsp;&nbsp;</a>
                 </li>
 
             </ul>
@@ -89,6 +86,11 @@
                                         <span class="spinner-border spinner-border-sm d-none" role="status"
                                             aria-hidden="true"></span>
                                         <i class="bi bi-github"></i>&nbsp;Sign-in using github</a>
+                                    {{-- <a href="{{ url('login/facebook') }}"
+                                        class="btn btn-outline-success form-control mb-2">
+                                        <span class="spinner-border spinner-border-sm d-none" role="status"
+                                            aria-hidden="true"></span>
+                                        <i class="bi bi-github"></i>&nbsp;Sign-in using Facebook</a> --}}
                                 </div>
                             </div>
                         </div>

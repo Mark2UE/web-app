@@ -50,6 +50,10 @@ Route::controller(LoginController::class)->group(function () {
 
     Route::get('/login/github', 'redirectToGitHub');
     Route::get('/login/github/callback', 'handleGitHubCallback');
+
+
+    // Route::get('login/facebook', 'redirectToFacebook');
+    // Route::get('login/facebook/callback', 'handleFacebookCallback');
 });
 
 

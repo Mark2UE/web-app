@@ -1,5 +1,5 @@
 @include('zencom.partials.header')
-<title>Zen | Community</title>
+<title>Community</title>
 <x-message />
 <section class="custom-margin-x-10">
     <div class="container-fluid">

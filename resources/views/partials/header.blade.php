@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +14,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+        * {
+            font-family: 'Source Code Pro', monospace;
+        }
+    </style>
 </head>
-<body>
-     
-    @if (Auth::check())
-    @include('components.navsession')
-    @else
-    @include('components.nav')
-    @endif
 
+<body>
+
+    @if (Auth::check())
+        @include('components.navsession')
+    @else
+        @include('components.nav')
+    @endif

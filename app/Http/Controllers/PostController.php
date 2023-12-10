@@ -64,7 +64,7 @@ class PostController extends Controller
         return view('zencom.post', [
             'post' => $post,
             'comments' => $comment,
-
+            'nav_bar' => 'community'
         ]);
     }
 
@@ -96,8 +96,8 @@ class PostController extends Controller
             [
                 'posts' => $post,
                 'interactions' => $interaction,
-                'contribute' => $contribute
-
+                'contribute' => $contribute,
+                'nav_bar' => 'profile'
             ]
 
 
@@ -188,6 +188,7 @@ class PostController extends Controller
                     'interactions' => $interaction,
                     'contribute' => $contribute,
                     'user' => $user,
+                    'nav_bar' => 'community'
 
                 ]
             );

@@ -19,7 +19,7 @@
                         <input type="email" class="form-control loginform fs-4" autocomplete="off" id="email"
                             name="email" required>
                     </div>
-                    
+
                 </div>
 
                 <div class="mt-5">

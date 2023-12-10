@@ -1,6 +1,6 @@
 <x-message />
 <!-- Footer -->
-<footer class="bg-dark text-center text-white">
+{{-- <footer class="bg-dark text-center text-white">
     <!-- Grid container -->
     <div class="container p-4">
         <!-- Section: Social media -->
@@ -163,7 +163,7 @@
         <a class="text-white" href="">Zenith App</a>
     </div>
 
-</footer>
+</footer> --}}
 
 </body>
 <script src="{{ asset('bootstrap-5.3.2/dist/js/bootstrap.bundle.js') }}"></script>
@@ -253,9 +253,9 @@
 
 <script>
     (function() {
-        var words = ["Immortals", "Fierce",
-            "Infinite", "Legendary",
-            "Zenith", "Valorant"
+        var words = ["Things", "Memories",
+            " a Story", "a Vision",
+            "Opportunities", "a Legacy"
         ];
         var i = 0;
         var j = 0;

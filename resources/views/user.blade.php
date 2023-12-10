@@ -6,10 +6,10 @@
         <div class="row m-5">
             <div class="col-lg-12 text-center p-5">
 
-                <h1 class="fs-1">
+                <div class="fs-1">
                     <br>
-                    <b>User Settings</b>
-                </h1>
+                    <b>Profile Settings</b>
+                </div>
             </div>
 
         </div>
@@ -20,7 +20,7 @@
 <section class="custom-margin-10">
     <div class="row">
         <div class="col">
-            <h1>Profile</h1>
+            <div class="fs-1">Profile</div>
             <hr>
         </div>
     </div>
