@@ -263,6 +263,13 @@ body {
 
 }
 
+.profile-picture-display-settings {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+
+}
 
 .hover-container {
     position: relative;
@@ -563,4 +570,13 @@ body {
 
 .img-coffee img {
     height: 50px;
+}
+
+.updateform {
+    width: 120px;
+}
+
+input.loginform:disabled {
+    background-color: #923434;
+    color: white;
 }
