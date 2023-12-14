@@ -151,7 +151,16 @@ class UserController extends Controller
         ])->with('messagreen', 'Welcome to /Communnity');
     }
 
+    public function update(Request $request)
+    {
+        $user = User::find($request->id);
 
+        $user->update([
+            'name' => $request->name,
+            'password' => Hash::make($request->password),
+        ]);
+        return back()->with('messagegreen', 'User has been Updated.');
+    }
 
 
 

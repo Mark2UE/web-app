@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Comment as Commenttopost;
 use Comment;
 
+
+
+
 class PostController extends Controller
 {
     public function post(Request $request, $id)
@@ -146,7 +149,7 @@ class PostController extends Controller
         foreach ($matchingRowsTable2 as $row) {
             $row->delete();
         }
-        return back()->with('messagegreen', 'Posts and Comments has been Deleted.');
+        return redirect('/community')->with('messagegreen', 'Post and Comment has been deleted.');
     }
 
     public function view_profile($id)
@@ -193,5 +196,18 @@ class PostController extends Controller
                 ]
             );
         }
+    }
+
+
+    public function update(Request $request)
+    {
+        // dd($request);
+        $post = PostModel::find($request->id);
+
+        $post->update([
+            'title' => $request->title,
+            'body' => $request->Body,
+        ]);
+        return back()->with('messagegreen', 'Post has been Updated.');
     }
 }
