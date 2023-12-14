@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -36,6 +37,7 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/welcome', 'index');
     Route::get('/home', 'index');
     Route::get('/', 'index')->name('home');
+    Route::post('/user/update', 'update');
     // Route::get('/forgot-password', 'show_form')->name('show.forgot');
     // Route::post('/forgot-password', 'forgot_password')->name('forgot.password')->middleware('guest');
     // Route::get('/reset/{resettoken}', 'password_reset')->name('validation');
@@ -62,9 +64,26 @@ Route::controller(LoginController::class)->group(function () {
 Route::controller(PostController::class)->group(function () {
     Route::post('/community/post/{token}', 'post')->middleware('auth');
     Route::get('/community/view/{id}', 'view')->middleware('auth');
-    Route::get('/community/profile', 'user_profile')->middleware('auth');
+    Route::get('/community/profile', 'user_profile')->middleware('auth')->name('view.profile');
     Route::post('/community/comment/{id}', 'comment')->middleware('auth');
+    Route::post('/community/comment/update/{id}', 'update')->middleware('auth');
     Route::get('/community/profile/delete/{id}', 'delete_post')->middleware('auth');
     Route::get('/community/users/{id}', 'view_profile')->middleware('auth');
 });
 //ADMIN CONTROLLER
+Route::controller(AdminController::class)->group(function () {
+    Route::get('/admin', 'index');
+    Route::post('/adminreg', 'login');
+    Route::get('/admin/dashboard', 'show');
+    Route::get('/admin/dashboard/users', 'show_users');
+
+    Route::get('/admin/dashboard/users/update/{id}', 'update_user');
+    Route::get('/admin/dashboard/users/delete/{id}', 'delete_user');
+
+
+
+    Route::get('/admin/dashboard/post', 'show_post');
+    Route::get('/admin/dashboard/post/update/{id}', 'show_post_update');
+    route::post('/community/post/update/{id}', 'update_post');
+    route::get('/admin/dashboard/post/delete/{id}', 'delete_post');
+});
