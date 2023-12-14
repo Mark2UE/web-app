@@ -99,10 +99,11 @@
                                         <div class="d-flex flex-row justify-content-end">
 
                                             @if ($post->author == auth()->user()->email)
-                                                <a href="/community/profile/edit/{{ $post->id }}"
+                                                <button aria-modal="#update{{ $post->id }}" data-bs-toggle="modal"
+                                                    data-bs-target="#update{{ $post->id }}"
                                                     class="link-light btn btn-success">
                                                     <div class="fs-5"><i class="bi bi-pencil-square"></i></div>
-                                                </a>
+                                                </button>
                                                 <button class="link-light btn btn-success" data-bs-toggle="modal"
                                                     data-bs-target="#delete{{ $post->id }}">
                                                     <div class="fs-5"><i class="bi bi-trash"></i></div>
@@ -226,6 +227,69 @@
                                 </div>
                             </div>
                         </div>
+                </div>
+            </div>
+
+
+
+            <div class="modal fade" tabindex="-1" id="update{{ $post->id }}"
+                aria-labelledby="uexampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="d-flex flex-column w-100">
+                        <div class="p-2">
+                            <h5 class="text-center">Update post</h5>
+                        </div>
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="d-flex flex-row justify-content-between">
+                                    <div class="p-2 d-flex flex-row align-items-center">
+                                        <div class="image-holder">
+                                            @if (auth()->user()->picture == null)
+                                                <img src="{{ asset('css/assets/defaultpic.JPG') }}"
+                                                    class="rounded-circle-custom">
+                                            @else
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(auth()->user()->picture) }}"
+                                                    class="rounded-circle-custom">
+                                            @endif
+                                        </div>
+                                        <h5 class="p-3">{{ auth()->user()->name }}</h5>
+                                    </div>
+                                </div>
+                                <hr>
+                                <form action="/community/comment/update/{{ $post->id }}" method="POST"
+                                    id="myForm">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $post->id }}">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label for="title" class="form-label">Title </label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control loginform"
+                                                        autocomplete="off" id="title" name="title"
+                                                        value="{{ $post->title }}">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="Body" class="form-label">Body</label>
+                                                <div class="form-floating">
+                                                    <textarea class="form-control loginform" id="floatingTextarea2" style="height: 100px" name="Body"
+                                                        maxlength="250">{{ $post->body }}</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="mt-5">
+                                                <button type="submit" class="btn btn-success form-control"
+                                                    id="loading-btn" onclick="submitForm()">
+                                                    <span class="spinner-border spinner-border-sm d-none"
+                                                        role="status" aria-hidden="true"></span>
+                                                    Update</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             @endforeach

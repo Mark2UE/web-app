@@ -221,10 +221,10 @@
                                                 </div>
                                             </div>
                                             <hr>
-
-                                            <form action="/community/post/{{ auth()->user()->id }}" method="POST"
-                                                id="myForm">
+                                            <form action="/community/comment/update/{{ $post->id }}"
+                                                method="POST" id="myForm">
                                                 @csrf
+                                                <input type="hidden" name="id" value="{{ $post->id }}">
                                                 <div class="row justify-content-center">
                                                     <div class="col-md-12">
                                                         <div class="mb-3">

@@ -17,13 +17,13 @@
                 @if (Auth::check())
                     <div class="text-end">
                         <br>
-                        <div class="fs-1">Hello, {{ auth()->user()->name }} 👋<br>
+                        <div class="fs-1">Hello, {{ auth()->user()->name }}<br>
                         </div>
                         <p>What's on your mind?</p>
 
                     </div>
                 @else
-                    <div class="text-center">                                   c1
+                    <div class="text-center">
                         <p>Sign-in using </p>
                         <a href="{{ url('login/google') }}" class="btn btn-outline-light form-control mb-2">
                             <span class="spinner-border spinner-border-sm d-none" role="status"

@@ -14,15 +14,7 @@
                     <a class="nav-link hover_cst" aria-current="page" href="/"><b
                             class="bi bi-house purple">&nbsp;</b>Home&nbsp;&nbsp;</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link hover_cst" href="/teams"><b
-                            class="bi bi-people orange">&nbsp;</b>Teams&nbsp;&nbsp;</a>
-                </li>
 
-                <li class="nav-item">
-                    <a class="nav-link hover_cst" href="/about"><b
-                            class="bi bi-lightning-charge yellow">&nbsp;</b>About Zen&nbsp;&nbsp;</a>
-                </li>
 
             </ul>
 
@@ -40,7 +32,7 @@
 
 <!-- Modal -->
 <div class="modal fade" tabindex="-1" id="loginform" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="d-flex flex-column w-100">
             <div class="p-2 text-center">
                 <div class="fs-3"><span class="highlight-green bold">Login</span>/User</div>
@@ -50,7 +42,7 @@
                     <form action="/login" method="POST" id="myForm">
                         @csrf
                         <div class="row justify-content-center">
-                            <div class="col-md-12">
+                            <div class="col-lg-6">
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email </label>
                                     <div class="input-group">
@@ -93,13 +85,56 @@
                                         <i class="bi bi-github"></i>&nbsp;Sign-in using Facebook</a> --}}
                                 </div>
                             </div>
-                        </div>
+
+                            <div class="col-lg-6 justify-content-center">
+
+                                <div id="carouselExampleCaptions" class="carousel slide">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleCaptions"
+                                            data-bs-slide-to="0" class="active" aria-current="true"
+                                            aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions"
+                                            data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions"
+                                            data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="{{ asset('css/assets/giphy.gif') }}" class="d-block w-100"
+                                                alt="...">
+
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="{{ asset('css/assets/giphy2.gif') }}" class="d-block w-100"
+                                                alt="...">
+
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="{{ asset('css/assets/giphy3.gif') }}" class="d-block w-100"
+                                                alt="...">
+
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-</form>
+</div>
+
 
 
 

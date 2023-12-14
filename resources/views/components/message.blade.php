@@ -10,10 +10,25 @@
                 </div>
                 <div class="toast-body orange-flow">
                     {{ session('message') }}
+
+
                 </div>
             </div>
         @endif
-       
+        @if (session()->has('adminconfirm'))
+            <div class="toast show bottom-0 end-0 toast-custom">
+                <div class="toast-header toast-custom">
+                    <strong class="me-auto">Alert</strong>
+                    <small class="">Just now</small>
+                    <button type="button" class="btn-close text-white" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+                <div class="toast-body orange-flow">
+                    {{ session('adminconfirm') }} <br>
+                    <a href="/admin/dashboard" class="btn btn-success">Go to Admin Dashboard</a>
+                </div>
+            </div>
+        @endif
         @if (session()->has('messagegreen'))
             <div class="toast show bottom-0 end-0 toast-custom">
                 <div class="toast-header toast-custom">

@@ -15,15 +15,7 @@
                     <a class="nav-link hover_cst" aria-current="page" href="/"><b
                             class="bi bi-house purple">&nbsp;</b>Home&nbsp;&nbsp;</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link hover_cst" href="#"><b
-                            class="bi bi-people orange">&nbsp;</b>Teams&nbsp;&nbsp;</a>
-                </li>
 
-                <li class="nav-item">
-                    <a class="nav-link hover_cst" href="#"><b
-                            class="bi bi-lightning-charge yellow">&nbsp;</b>About Community&nbsp;&nbsp;</a>
-                </li>
 
             </ul>
             <div class="d-flex" role="search">
