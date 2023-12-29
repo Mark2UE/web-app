@@ -44,37 +44,7 @@ class UserController extends Controller
         );
     }
 
-    public function register(Request $request)
-    {
-
-
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users|max:255',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
-
-        // Convert 'name' and 'email' to lowercase
-        $user_lower = strtolower($validatedData['name']);
-        $email_lower = strtolower($validatedData['email']);
-
-        $noSpacesString = preg_replace('/\s+/', '', $user_lower);
-        // Process and store the data
-        $user = User::create([
-            'name' => $noSpacesString,
-            'email' => $email_lower,
-            'password' => Hash::make($validatedData['password']),
-        ]);
-
-
-        // Send confirmation or error messages
-        if ($user) {
-            auth()->login($user);
-            return redirect('/')->with('message', 'Registration successful.');
-        } else {
-            return back()->with('message', 'Registration failed. Please try again.');
-        }
-    }
+   
 
 
 
@@ -86,26 +56,7 @@ class UserController extends Controller
         return redirect('/')->with('messagegreen', 'Logout Successful');
     }
 
-    public function login(Request $request)
-    {
-
-        $validatedData = $request->validate([
-            "email" => ['required', 'email'],
-            'password' => 'required'
-        ]);
-
-
-        if (auth()->attempt($validatedData)) {
-
-            $request->session()->regenerate();
-            $user = auth()->user();
-
-            return redirect('/')->with('messagegreen', 'Welcome Back User, ' . auth()->user()->name . '');
-        } else {
-            return back()->with('message', 'Wrong Email or Pass')->onlyInput('email');
-        }
-    }
-
+    
 
     public function show()
     {

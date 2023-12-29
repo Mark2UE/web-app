@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('bootstrap-5.3.2/dist/css/bootstrap.min.css') }}">
+    {{-- 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="shortcut icon" href="{{ asset('css/assets/favicon.ico') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,13 +18,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,500&display=swap');
 
         * {
-            font-family: 'Source Code Pro', monospace;
+            font-family: 'Raleway', sans-serif;
         }
     </style>
 </head>

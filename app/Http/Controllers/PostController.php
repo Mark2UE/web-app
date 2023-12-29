@@ -45,13 +45,13 @@ class PostController extends Controller
 
     public function view($id)
     {
-        $post = DB::table('posts')
+        $posts = DB::table('posts')
             ->join('users', 'posts.author', '=', 'users.email')
             ->where('posts.status', '=', 'Public')
             ->where('posts.id', '=', $id)
-            ->select('posts.id', 'posts.title', 'posts.body', 'posts.created_at', 'users.name', 'users.picture', 'users.email')
+            ->select('posts.id', 'posts.title', 'posts.body', 'posts.author', 'posts.created_at', 'users.name', 'users.picture', 'users.email')
             ->orderBy('posts.created_at', 'desc')
-            ->first(); // Use first() instead of get() to retrieve a single record
+            ->get(); // Use first() instead of get() to retrieve a single record
 
         $comment = DB::table('comments')
             ->join('users', 'users.email', '=', 'author')
@@ -61,13 +61,20 @@ class PostController extends Controller
             ->orderBy('comments.created_at', 'desc')
             ->get();
 
-
+        $user = DB::table('posts')
+            ->join('users', 'posts.author', '=', 'users.email')
+            ->where('posts.status', '=', 'Public')
+            ->where('posts.id', '=', $id)
+            ->select('posts.id', 'posts.title', 'posts.body', 'posts.author', 'posts.created_at', 'users.name', 'users.picture', 'users.email')
+            ->orderBy('posts.created_at', 'desc')
+            ->first(); // Use first() instead of get() to retrieve a single record
 
 
         return view('zencom.post', [
-            'post' => $post,
+            'posts' => $posts,
             'comments' => $comment,
-            'nav_bar' => 'community'
+            'nav_bar' => 'community',
+            'users' => $user,
         ]);
     }
 
@@ -78,7 +85,7 @@ class PostController extends Controller
             ->join('users', 'posts.author', '=', 'users.email')
             ->where('posts.status', '=', 'Public')
             ->where('posts.author', '=', auth()->user()->email)
-            ->select('posts.id', 'posts.title', 'posts.body', 'posts.created_at', 'users.name', 'users.picture', 'users.email')
+            ->select('posts.id', 'posts.title', 'posts.body', 'posts.author', 'posts.created_at', 'users.name', 'users.picture', 'users.email')
             ->orderBy('posts.created_at', 'desc')
             ->get(); // Use first() instead of get() to retrieve a single record
 
@@ -149,6 +156,7 @@ class PostController extends Controller
         foreach ($matchingRowsTable2 as $row) {
             $row->delete();
         }
+
         return redirect('/community')->with('messagegreen', 'Post and Comment has been deleted.');
     }
 
@@ -168,7 +176,7 @@ class PostController extends Controller
                 ->join('users', 'posts.author', '=', 'users.email')
                 ->where('posts.status', '=', 'Public')
                 ->where('posts.author', '=', $id)
-                ->select('posts.id', 'posts.title', 'posts.body', 'posts.created_at', 'users.name', 'users.picture', 'users.email')
+                ->select('posts.id', 'posts.title', 'posts.body', 'posts.author', 'posts.created_at', 'users.name', 'users.picture', 'users.email')
                 ->orderBy('posts.created_at', 'desc')
                 ->get(); // Use first() instead of get() to retrieve a single record
 

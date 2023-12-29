@@ -1,10 +1,10 @@
-<div class="modal fade" tabindex="-1" id="postform" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" tabindex="-1" id="postform" aria-divledby="exampleModaldiv" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="d-flex flex-column w-100">
             <div class="p-2">
                 <h5 class="text-center">Post</h5>
             </div>
-         <div class="modal-content">
+            <div class="modal-content">
                 <div class="modal-body">
                     <div class="d-flex flex-row justify-content-between">
                         <div class="p-2 d-flex flex-row align-items-center">
@@ -26,16 +26,16 @@
                         <div class="row justify-content-center">
                             <div class="col-md-12">
                                 <div class="mb-3">
-                                    <label for="title" class="form-label">Title </label>
+                                    <div for="title" class="form-div">Title </div>
                                     <div class="input-group">
                                         <input type="text" class="form-control loginform" autocomplete="off"
-                                            id="title" name="title">
+                                            id="title" name="title" placeholder="Add a title..">
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="Body" class="form-label">Body</label>
+                                    <div class="form-div">Body</div>
                                     <div class="form-floating">
-                                        <textarea class="form-control loginform" id="floatingTextarea2" style="height: 100px" name="Body" maxlength="250"></textarea>
+                                        <textarea class="form-control loginform" id="floatingTextarea2" style="height: 100px" name="Body"></textarea>
                                     </div>
                                 </div>
                                 <div class="mt-5">
@@ -80,7 +80,8 @@
 
 
 </body>
-<script src="{{ asset('bootstrap-5.3.2/dist/js/bootstrap.bundle.js') }}"></script>
+<script src="{{ asset('bootstrap-5.3.2/dist/js/bootstrap.bundle.min.js') }}"></script>
+
 
 </html>
 

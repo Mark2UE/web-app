@@ -1,7 +1,7 @@
 * {
-    font-family: 'Montserrat', sans-serif;
-    transition: 0.5s ease;
-    overflow-x: hidden;
+
+    transition: 0.1s ease;
+
 }
 
 ::selection {
@@ -46,9 +46,18 @@ body {
 }
 
 .card-custom {
-    background-color: #1c2127;
-    border-radius: 0;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #1c21275f;
+    border-radius: 10px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    border: 1px solid rgba(255, 255, 255, 0.29);
+    /* border: 0.1px solid white; */
+
+
+
+}
+
+.border-1 {
+    border: 1px solid rgba(255, 255, 255, 0.29);
 }
 
 .nav-bg-custom {
@@ -71,10 +80,10 @@ body {
 .loginform,
 .loginform:-webkit-autofill,
 .loginform:focus {
-    background-color: #1e1e1e8b;
+    background-color: #1c21271a;
     color: white;
     outline: none;
-    border-radius: 0;
+    border-radius: 5px;
 
 }
 
@@ -120,7 +129,7 @@ body {
 .hero-new__background-image {
 
 
-    height: 100vh;
+    height: 90vh;
     width: 100%;
 
     /* Background image properties */
@@ -128,7 +137,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('assets/son-riot-website_short.png');
+    background-image: url('assets/background.png');
 
 }
 
@@ -151,22 +160,27 @@ body {
 
 @media (min-width: 760px) {
     .hero-new__background-image {
-        background-image: url('assets/son-riot-website.png');
+        background-image: url('assets/background.png');
     }
 }
 
 
 .modal {
-    background-color: #21252975;
+
+    background-color: #212529cc;
+
+
 
 }
 
 
 
 .modal-content {
+
     background-color: #212529;
-    border-radius: 0;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 
 .toast-custom {
@@ -324,8 +338,23 @@ body {
     text-shadow: 2px 7px 12px rgba(0, 0, 0, 0.64);
 }
 
+/* @import url('https://fonts.googleapis.com/css?family=Exo:400,700'); */
+
 .bg-header {
+
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.29);
+}
+
+
+.bg-footer {
     background-color: #2b3136;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
 }
 
 .bg-header-nav {
@@ -374,7 +403,7 @@ body {
 }
 
 .btn {
-    border-radius: 0;
+    border-radius: 10px;
     padding: 10px;
 
 
@@ -502,6 +531,7 @@ body {
 
 .custom-card-dark {
     background-color: #161a1f;
+
     border-radius: 0;
     color: white;
     padding: 5px;
@@ -513,6 +543,12 @@ body {
     max-height: 100px;
 }
 
+
+.logoUp {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
 
 
 .rounded-circle {
@@ -530,8 +566,8 @@ body {
 
 .card-custom-comment {
     background-color: #1c21275f;
-    border-radius: 0;
-
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.29);
 }
 
 .custom-image-size {
@@ -579,4 +615,45 @@ body {
 input.loginform:disabled {
     background-color: #923434;
     color: white;
+}
+
+.nav-item:hover {
+    background-color: #2b3136;
+    border-radius: 20px;
+}
+
+.options_post {
+
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    cursor: pointer;
+    margin: 4px;
+}
+
+.hover-buttons:hover {
+    background-color: #2b3136;
+    cursor: pointer;
+    margin: 0;
+
+}
+
+.hr-custom {
+    margin: 0;
+}
+
+.btn-custom {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dropdown-menu-dark {
+    margin: 0;
+    padding: 0;
+}
+
+.btn-custom:hover {
+    background-color: #4c575f;
 }

@@ -90,14 +90,5 @@
         $('#example').DataTable();
     });
 </script>
-<script>
-    $(document).ready(function() {
-        $('#example').DataTable({
-            "paging": true,
-            "ordering": true,
-            "info": true
-        });
-    });
-</script>
 
 @include('admin.admin-partials.footer')

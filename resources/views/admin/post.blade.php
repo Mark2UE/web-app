@@ -1,4 +1,3 @@
-@include('admin.admin-partials.header')
 <!-- jQuery -->
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -16,6 +15,9 @@
         color: white;
     }
 </style>
+
+@include('admin.admin-partials.header')
+
 <hr>
 <div class="container-fluid">
     <div class="fs-1 text-white">
@@ -99,15 +101,6 @@
 
         // Initialize DataTable
         $('#example').DataTable();
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        $('#example').DataTable({
-            "paging": true,
-            "ordering": true,
-            "info": true
-        });
     });
 </script>
 

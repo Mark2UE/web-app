@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Auth;
 //USER
 Route::controller(UserController::class)->group(function () {
 
-    Route::post('/store', 'register')->middleware('guest');
+
     Route::post('/logout', 'logout');
     Route::post('/login', 'login');
     Route::get('/user', 'show')->middleware('auth');

@@ -1,51 +1,85 @@
-<nav class="navbar navbar-expand-lg bg-header-nav fixed-top py-4">
-    <div class="container">
-        <div class="d-flex justify-content-end">
+<nav class="navbar navbar-expand-lg bg-header-nav fixed-top">
+    <div class="container d-flex flex-row">
 
-            <div class="p-1">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <h5 class="text-white"> <span class="bi bi-arrow-90deg-up"></span></h5>
-                </button>
-            </div>
+        <a class="navbar-brand" href="/community" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <img src="{{ asset('css/assets/ORIG_PNG.png') }}" alt="" class="logoUp">
+        </a>
 
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mx-auto"> <!-- mx-auto will center the ul -->
+
+                <li class="nav-item px-5 text-center"> <!-- Added text-center class to center the content -->
+                    <a class="nav-link text-white" aria-current="page" href="/community/profile">
+                        @if ($nav_bar == 'profile')
+                            <div class="fs-2">
+                                <i class="bi bi-person-fill green"></i>
+
+                            </div>
+                        @else
+                            <i class="fs-2 bi bi-person"></i>
+                        @endif
+                    </a>
+                </li>
+
+
+                <li class="nav-item px-5 text-center">
+                    <a class="nav-link text-white fs-2" href="/community">
+                        @if ($nav_bar == 'community')
+                            <i class="fs-2 bi bi-people-fill green"></i>
+                        @else
+                            <i class="fs-2 bi bi-people"></i>
+                        @endif
+                    </a>
+                </li>
+                <li class="nav-item px-5 text-center">
+                    <a class="nav-link text-white " href="/">
+
+                        <i class="fs-2 bi bi-search"></i>
+
+                    </a>
+                </li>
+                <li class="nav-item px-5 text-center">
+                    <a class="nav-link text-white " href="/">
+
+                        <i class="fs-2 bi bi-arrow-return-right"></i>
+
+                    </a>
+                </li>
+
+            </ul>
         </div>
 
-        <div class="collapse navbar-collapse fs-5  justify-content-between" id="navbarTogglerDemo01">
-            <a class="navbar-brand text-white" href="/community">
-                <div class="fs-4"><b>/Community</b>
-                </div>
-            </a>
-            <ul class="navbar-nav">
-                <li class="nav-item px-3">
-                    <a class="nav-link text-white" aria-current="page" href="/community/profile">
 
 
-                        @if ($nav_bar == 'profile')
-                            <p class="green"> Profile</p>
-                        @else
-                            <p> Profile</p>
-                        @endif
 
-                    </a>
+
+        <div class="navbar-brand btn-group ">
+            <div class="options_post" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fs-1 bi bi-list-nested"></i>
+            </div>
+            <ul class="dropdown-menu  dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Account</a></li>
+                <li><a class="dropdown-item" href="#">About</a></li>
+
+                <li>
+                    <hr class="hr-custom">
                 </li>
-                <li class="nav-item px-3">
-                    <a class="nav-link text-white" href="/community">
+                <li>
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button type="submit" class="dropdown-item" href="">Logout</button>
+                    </form>
 
-                        @if ($nav_bar == 'community')
-                            <p class="green"> Feeds</p>
-                        @else
-                            <p> Feeds</p>
-                        @endif
-
-
-                    </a>
-                </li>
-                <li class="nav-item px-3">
-                    <a class="nav-link text-white" href="/">Main</a>
                 </li>
             </ul>
         </div>
+
+
+
+
+
+
     </div>
 </nav>
