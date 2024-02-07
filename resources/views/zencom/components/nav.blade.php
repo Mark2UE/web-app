@@ -60,7 +60,7 @@
                 <i class="fs-1 bi bi-list-nested"></i>
             </div>
             <ul class="dropdown-menu  dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">Account</a></li>
+                <li><a class="dropdown-item" href="/community/account">Account</a></li>
                 <li><a class="dropdown-item" href="#">About</a></li>
 
                 <li>
