@@ -112,7 +112,14 @@ class UserController extends Controller
         ]);
         return back()->with('messagegreen', 'User has been Updated.');
     }
+    public function account(){
 
+        
+        return view('zencom.account',[
+
+        'nav_bar' => 'community'
+        ]);
+    }
 
 
 
