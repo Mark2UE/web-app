@@ -38,6 +38,7 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/home', 'index');
     Route::get('/', 'index')->name('home');
     Route::post('/user/update', 'update');
+    Route::get('/community/account', 'account');
     // Route::get('/forgot-password', 'show_form')->name('show.forgot');
     // Route::post('/forgot-password', 'forgot_password')->name('forgot.password')->middleware('guest');
     // Route::get('/reset/{resettoken}', 'password_reset')->name('validation');
