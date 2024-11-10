@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'sqlsrv'),
 
     /*
     |--------------------------------------------------------------------------
@@ -27,7 +27,7 @@ return [
     | supported by Laravel is shown below to make development simple.
     |
     |
-    | All database work in Laravel is done through the PHP PDO facilities
+    | All database work in Laravel is done through the PHPphp PDO facilities
     | so make sure you have the driver for your particular database of
     | choice installed on your machine before you begin development.
     |
@@ -78,11 +78,12 @@ return [
             'sslmode' => 'prefer',
         ],
 
+  
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '1433'),
+            // 'port' => env('DB_PORT', '1433'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
@@ -90,7 +91,19 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
-
+/*
+        'sqlsrv' => [
+            'driver' => 'sqlsrv',
+            'host' => env('DB_HOST', 'LAPTOP-1FRRMF9R'),
+            'port' => env('DB_PORT', '1433'),
+            'database' => env('DB_DATABASE', 'DB_NET'),
+            'username' => env('DB_USERNAME', 'markdb'),
+            'password' => env('DB_PASSWORD', 'Password@123'),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+        ],
+        */
     ],
 
     /*

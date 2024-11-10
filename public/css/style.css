@@ -657,3 +657,13 @@ input.loginform:disabled {
 .btn-custom:hover {
     background-color: #4c575f;
 }
+
+.gachas{
+    width: 50%;
+    height: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.gachas img{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

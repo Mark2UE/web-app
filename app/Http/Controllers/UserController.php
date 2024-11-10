@@ -44,7 +44,7 @@ class UserController extends Controller
         );
     }
 
-   
+
 
 
 
@@ -56,12 +56,14 @@ class UserController extends Controller
         return redirect('/')->with('messagegreen', 'Logout Successful');
     }
 
-    
+
 
     public function show()
     {
         return view('user');
     }
+
+
     public function store(Request $request)
     {
         $request->validate([
@@ -76,14 +78,21 @@ class UserController extends Controller
         }
 
         $uploadedFile = $request->file('picture');
-        $imageContent = file_get_contents($uploadedFile->path());
+        //$imageContent = file_get_contents($uploadedFile->path());
+        $img = file_get_contents($uploadedFile);
+        $string = unpack("H*hex",$img);
+        $string = '0X'.$string['hex'];
+
+       // $imageBinary = pack('H*', bin2hex($imageContent));
 
         $user->update([
-            'picture' => $imageContent, // Store the file path in the database
+            'picture' => $user_pic = DB::raw("CONVERT(VARBINARY(MAX), $string)"), // Store the file path in the database
             // other user data...
         ]);
         return back()->with('messagegreen', 'User picture updated successfully.');
     }
+
+
 
 
     public function show_community()
@@ -114,11 +123,17 @@ class UserController extends Controller
     }
     public function account(){
 
-        
+
         return view('zencom.account',[
 
         'nav_bar' => 'community'
         ]);
+    }
+    public function gacha(){
+        return view('zencom.gacha',[
+
+            'nav_bar' => 'community'
+            ]);
     }
 
 

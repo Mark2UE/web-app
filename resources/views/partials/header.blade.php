@@ -20,9 +20,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,500&display=swap');
 
-        * {
-            font-family: 'Raleway', sans-serif;
-        }
+       
     </style>
 </head>
 

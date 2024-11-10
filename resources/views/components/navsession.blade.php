@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg nav-bg-custom  fixed-top" id="navbar">
 
     <div class="container-fluid">
@@ -40,7 +41,9 @@
                         <div class="col-* hover-container">
                             <div class="d-flex justify-content-center mx-auto">
                                 @if (auth()->user()->picture)
+                            
                                     <a href="" data-bs-toggle="modal" data-bs-target="#insertavatar">
+                                        
                                         <img class="file-upload-image profile-picture-display"
                                             src="data:image/jpeg;base64,{{ base64_encode(auth()->user()->picture) }}"
                                             alt="User Picture">
