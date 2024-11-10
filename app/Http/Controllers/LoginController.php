@@ -26,7 +26,7 @@ class LoginController extends Controller
             $user = Socialite::driver('google')->user();
             //dd($user);
         } catch (\Exception $e) {
-            dd($e->getMessage());
+            return redirect('/home')->with('message', 'Operation was Cancelled!');
         }
 
 

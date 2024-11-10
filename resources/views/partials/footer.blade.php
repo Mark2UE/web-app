@@ -253,9 +253,8 @@
 
 <script>
     (function() {
-        var words = ["Things", "Memories",
-            " a Story", "a Vision",
-            "Opportunities", "a Legacy"
+        var words = ["Codes", "Queries",
+            "Stuff", "Notes","Things"
         ];
         var i = 0;
         var j = 0;
@@ -337,3 +336,5 @@
         $('.file-upload-placeholder').removeClass('image-dropping');
     });
 </script>
+
+

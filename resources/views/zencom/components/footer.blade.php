@@ -35,7 +35,16 @@
                                 <div class="mb-3">
                                     <div class="form-div">Body</div>
                                     <div class="form-floating">
+                                      
                                         <textarea class="form-control loginform" id="floatingTextarea2" style="height: 100px" name="Body"></textarea>
+
+                                        {{-- <textarea class="form-control loginform" id="floatingTextarea2"  style="height: 100px" name="Body"></textarea> --}}
+
+                                        {{-- <textarea id="floatingTextarea2" name="Body" style="display:none;"></textarea>
+
+                                        <!-- Quill Editor Container (which Quill will initialize) -->    --}}
+                                <div id="editor-container"></div>
+
                                     </div>
                                 </div>
                                 <div class="mt-5">
@@ -113,39 +122,29 @@
     }
 </script>
 
-<script>
-    (function() {
-        var words = ["Community", "Socialize",
-            "Warriors", "UEZenith", "SubstanceOverForm"
 
-        ];
-        var i = 0;
-        var j = 0;
-        var currentWord = '';
-        var isDeleting = false;
-
-        function type() {
-            var speed = 200; // typing speed in milliseconds
-
-            if (j < words[i].length && !isDeleting) {
-                currentWord += words[i][j];
-                $('#delivery').text(currentWord);
-                j++;
-            } else if (j > 0 && isDeleting) {
-                currentWord = currentWord.slice(0, -1);
-                $('#delivery').text(currentWord);
-                j--;
-            } else {
-                isDeleting = !isDeleting;
-                if (isDeleting) {
-                    speed = 500; // pause before starting to type next word when deleting
-                }
-                i = (i + 1) % words.length;
-            }
-
-            setTimeout(type, speed);
-        }
-
-        type(); // start typing when the page loads
-    })();
-</script>
+{{-- <script>
+    // Initialize Quill editor
+    var quill = new Quill('#editor-container', {
+      theme: 'snow',
+      modules: {
+        toolbar: [
+          ['bold', 'italic', 'underline'],
+          [{ 'list': 'ordered' }, { 'list': 'bullet' }]
+        ]
+      }
+    });
+  
+    // Function to handle form submission
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      // Prevent form submission to handle it manually
+      event.preventDefault();
+  
+      // Transfer Quill's content to the hidden textarea
+      var content = quill.root.innerHTML;
+      document.querySelector('textarea[name="Body"]').value = content;
+  
+      // Submit the form after transferring content
+      document.getElementById('myForm').submit();
+    });
+  </script> --}}

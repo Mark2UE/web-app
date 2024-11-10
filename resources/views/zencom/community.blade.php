@@ -40,7 +40,7 @@
                                 <div class="d-flex flex-column justify-content-center">
                                     <div class="fs-5 px-3"><b> Mark Manliclic</b></div>
                                     <p class="px-3">
-                                        CEO-ADMIN</p>
+                                        ADMIN</p>
                                 </div>
                             </div>
                             <div class="d-flex flex-column align-items-center p-2">
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                         <div class="card-body  p-3">
-                            <div class="fs-1 card-title">Welcome to /Community.</div>
+                            <div class="fs-1 card-title">Welcome to Code Shelf.</div>
                             <hr>
                             <p class="card-text">
                                 1) <b class="highlight-green">Positive Engagement: </b>This is a space for positive
@@ -63,9 +63,9 @@
                                 community.
                             </p>
 
-                            <span class="">Thank you for being a part of our /Community 🌟<span>
+                            <span class="">Thank you for being a part of our Code Shelf Community🌟<span>
                                     <br>
-                                    #<b id="delivery"></b>
+                                    #Contribute
                         </div>
 
                     </div>

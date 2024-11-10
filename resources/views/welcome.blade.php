@@ -6,9 +6,9 @@
     <div class="container-xxl">
         <div class="row m-5">
             <div class="col-lg-6 text-start p-5">
-                <b>Welcome to Community</b>
+                <b>Welcome to The Code Shelf</b>
                 <div class="fs-1">
-                    Create <span id="delivery"></span>
+                    Store <span id="delivery"></span>
                 </div>
                 <br>
                 <p>Empower Your World: Contribute, Interact, Connect with Community. 🌐✨</p>
@@ -37,7 +37,7 @@
 
                     </div>
 
-                    Create a Page for a celebrity, brand or business.
+                    Create your repository!
                 @endif
 
             </div>
@@ -51,7 +51,7 @@
 <section class="hero-new__background-image">
 
     <div class="container-xxl">
-        <div class="fs-1">What is Community?</div>
+        <div class="fs-1">What is Code Shelf?</div>
         <hr>
         <div class="row my-5">
             <div class="col-lg-4">
@@ -87,7 +87,7 @@
 
 
         <div class="row">
-            <div class="fs-1">Why is Community?</div>
+            <div class="fs-1">Why is Code Shelf?</div>
             <hr>
             <div class="col-lg-6">
                 <div class="fs-5 p-5 m-1">

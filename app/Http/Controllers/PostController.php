@@ -20,7 +20,7 @@ class PostController extends Controller
 
             $validatedData = $request->validate([
                 'title' => 'required',
-                'Body' => 'required',
+                'Body' => 'required|string',
             ]);
 
             // Process and store the data
